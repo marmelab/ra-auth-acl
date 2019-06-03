@@ -1,0 +1,42 @@
+{
+    "name": "ra-auth-acl",
+    "version": "0.1.0",
+    "description": "Access Control List helper for React Admin",
+    "main": "lib/index.js",
+    "module": "esm/index.js",
+    "types": "esm/index.d.ts",
+    "sideEffects": false,
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "rimraf ./lib && rimraf ./esm && tsc && tsc --outDir esm --module es2015"
+    },
+    "author": "Kévin Maschtaler <kevin@marmelab.com>",
+    "license": "MIT",
+    "files": [
+        "esm",
+        "lib",
+        "src",
+        "*.md"
+    ],
+    "peerDependencies": {
+        "ra-core": "^2.9.2",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6"
+    },
+    "dependencies": {
+        "lodash.get": "^4.4.2"
+    },
+    "devDependencies": {
+        "@types/react": "^16.8.19",
+        "prettier": "^1.17.1",
+        "ra-core": "^2.9.2",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "rimraf": "^2.6.3",
+        "tslint": "^5.17.0",
+        "tslint-config-prettier": "^1.18.0",
+        "tslint-plugin-prettier": "^2.0.1",
+        "tslint-react": "^4.0.0",
+        "typescript": "^3.5.1"
+    }
+}
