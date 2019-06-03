@@ -12,9 +12,9 @@ yarn add ra-auth-acl
 
 ## Usage
 
-This library rely on the existing [React Admin permission management](https://marmelab.com/react-admin/Authorization.html) which allows to get permissions from an authenticated user.
+This library relies on the existing [React Admin permission management](https://marmelab.com/react-admin/Authorization.html), which allows to get permissions from an authenticated user.
 
-1. Use `ResourceWithPermissions` instead of `Resource` of React Admin.
+1. Use `<ResourceWithPermissions>` instead of the react-admin `<Resource>` component.
 
 ```jsx
 import React from 'react';
@@ -34,7 +34,7 @@ render(
 );
 ```
 
-2. On your [custom authentication provider](https://marmelab.com/react-admin/Authentication.html#configuring-the-auth-provider), you have to return your access control list when the framework ask for it.
+2. On your [custom authentication provider](https://marmelab.com/react-admin/Authentication.html#configuring-the-auth-provider), return an access control list when the framework asks for it using the `AUTH_GET_PERMISSIONS` verb:
 
 ```js
 // authProvider.js
@@ -88,7 +88,7 @@ export const UserList = ({ permissions, ...props }) => (
 
 ## Dealing With Roles
 
-Instead of building the permissions list each time, you can store the role on the local storage or in a JSON Web Token, and request your permissions list at runtime:
+Instead of building the permissions list each time, you can store the role in the local storage or in a JSON Web Token, and request the permissions list at runtime:
 
 ```js
 // authProvider.js
