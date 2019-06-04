@@ -16,14 +16,12 @@ export const ResourceWithPermissions = ({
     show,
     ...props
 }: Props) => {
-    const prefix = name.toLowerCase();
-
     const access = {
-        enabled: hasAccess(permissions, `${prefix}.enabled`),
-        list: hasAccess(permissions, `${prefix}.list`),
-        create: hasAccess(permissions, `${prefix}.create`),
-        edit: hasAccess(permissions, `${prefix}.edit`),
-        show: hasAccess(permissions, `${prefix}.show`),
+        enabled: hasAccess(permissions, `${name}.enabled`),
+        list: hasAccess(permissions, `${name}.list`),
+        create: hasAccess(permissions, `${name}.create`),
+        edit: hasAccess(permissions, `${name}.edit`),
+        show: hasAccess(permissions, `${name}.show`),
     };
 
     if (!access.enabled) {
