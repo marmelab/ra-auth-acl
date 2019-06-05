@@ -1,6 +1,8 @@
 # Access Control List for React Admin
 
-Provide a small ACL framework to manage resources views access based on pre-defined roles.
+![GitHub top language](https://img.shields.io/github/languages/top/marmelab/ra-auth-acl.svg) ![GitHub contributors](https://img.shields.io/github/contributors/marmelab/ra-auth-acl.svg) ![License](https://img.shields.io/github/license/marmelab/ra-auth-acl.svg) ![npm](https://img.shields.io/npm/v/ra-auth-acl.svg)
+
+Provide a small ACL framework for [react-admin](https://github.com/marmelab/react-admin) to manage resources views access based on pre-defined roles.
 
 ## Getting Started
 
@@ -111,6 +113,11 @@ export default (type, params) => {
     }
 };
 ```
+
+## Maintainer
+
+[![Kmaschta](https://avatars2.githubusercontent.com/u/1819833?s=96&amp;v=4)](https://github.com/Kmaschta)     
+[Kmaschta](https://github.com/Kmaschta)
 
 ## License
 
