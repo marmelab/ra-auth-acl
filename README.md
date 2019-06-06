@@ -72,7 +72,7 @@ The ACL works with five default permissions, all `false` by default:
 - **edit**: Display the edit view of the resource
 - **show**: Display the show view of the resource
 
-You can go with your custom permissions and use the `hasAccess` helper to customize your resources:
+3. You can go with your custom permissions and use the `hasAccess` helper to customize your resources:
 
 ```jsx
 import { hasAccess } from 'ra-auth-acl';
@@ -86,6 +86,12 @@ export const UserList = ({ permissions, ...props }) => (
         </Datagrid>
     </List>
 );
+```
+
+You can chain all the permissions you need in the `hasAccess` helper. All of them should be `true` to unlock the access.
+
+```jsx
+hasAccess(permissions, 'user.edit', 'user.custom')
 ```
 
 ## Dealing With Roles
@@ -116,7 +122,7 @@ export default (type, params) => {
 
 ## Maintainer
 
-[![Kmaschta](https://avatars2.githubusercontent.com/u/1819833?s=96&amp;v=4)](https://github.com/Kmaschta)     
+[![Kmaschta](https://avatars2.githubusercontent.com/u/1819833?s=96&amp;v=4)](https://github.com/Kmaschta)
 [Kmaschta](https://github.com/Kmaschta)
 
 ## License
