@@ -1,6 +1,7 @@
 import get from 'lodash.get';
 
-export const hasAccess = (permissions, permission) => get(permissions, permission, false);
+export const hasAccess = (permissions, ...askedPermissions) =>
+    askedPermissions.every(permission => get(permissions, permission, false));
 
 export const buildFullAccessFor = (resources: string[]) =>
     resources.reduce((acc, resource) => {
