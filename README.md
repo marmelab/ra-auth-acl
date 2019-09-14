@@ -21,6 +21,7 @@ This library relies on the existing [React Admin permission management](https://
 ```jsx
 import React from 'react';
 import { Admin } from 'react-admin';
+import { ResourceWithPermissions } from 'ra-auth-acl';
 
 import authProvider from './authProvider';
 import posts from './posts';
@@ -66,11 +67,11 @@ export default (type, params) => {
 
 The ACL works with five default permissions, all `false` by default:
 
-- **enabled**: Display the resource or not.
-- **list**: Display the list view of the resource
-- **create**: Display the create view of the resource
-- **edit**: Display the edit view of the resource
-- **show**: Display the show view of the resource
+-   **enabled**: Display the resource or not.
+-   **list**: Display the list view of the resource
+-   **create**: Display the create view of the resource
+-   **edit**: Display the edit view of the resource
+-   **show**: Display the show view of the resource
 
 3. You can go with your custom permissions and use the `hasAccess` helper to customize your resources:
 
@@ -91,7 +92,7 @@ export const UserList = ({ permissions, ...props }) => (
 You can chain all the permissions you need in the `hasAccess` helper. All of them should be `true` to unlock the access.
 
 ```jsx
-hasAccess(permissions, 'user.edit', 'user.custom')
+hasAccess(permissions, 'user.edit', 'user.custom');
 ```
 
 ## Dealing With Roles
@@ -122,7 +123,7 @@ export default (type, params) => {
 
 ## Maintainer
 
-[![Kmaschta](https://avatars2.githubusercontent.com/u/1819833?s=96&amp;v=4)](https://github.com/Kmaschta)
+[![Kmaschta](https://avatars2.githubusercontent.com/u/1819833?s=96&v=4)](https://github.com/Kmaschta)
 [Kmaschta](https://github.com/Kmaschta)
 
 ## License
