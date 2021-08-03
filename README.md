@@ -4,6 +4,8 @@
 
 Provide a small ACL framework for [react-admin](https://github.com/marmelab/react-admin) to manage resources views access based on pre-defined roles.
 
+**Tip**: For a more complete solution for complex roles and permissions, check out [ra-rbac](https://marmelab.com/ra-enterprise/modules/ra-rbac). 
+
 ## Getting Started
 
 ```bash
